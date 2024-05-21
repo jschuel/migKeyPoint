@@ -14,7 +14,7 @@
 git clone git@github.com:<your_username>/migKeyPoint.git
 ```
 
-if this doesn't work try
+For the above command to work, you have to add an ssh key [(instructions here)](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux) to your account which I would recommend doing (it makes editing git repos way easier). if this doesn't work try
 
 ```bash
 git clone https://github.com/<your_username>/migKeyPoint.git
