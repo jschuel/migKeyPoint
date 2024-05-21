@@ -52,3 +52,5 @@ where `/path/to/` should be replaced with the directory path of migKeyPoint in y
 
 7. In the `migKeyPoint` directory, run `python3 setup_environment.py`. This script will unzip the contents of `zipped_files.zip` and will move them to their appropriate directories.
 8. Assuming all went well, you are now set up to run the tutorials! Navigate to the `tutorials` directory, open up a Jupyter notebook by typing `jupyter notebook` in your terminal, and you can start playing around!
+
+# master_configuration.yaml instructions (Coming soon)
