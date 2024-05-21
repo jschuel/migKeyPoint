@@ -33,7 +33,7 @@ If neither of these work, you can download the zipped directory.
    ```sh
    conda activate keypoint
    ```
-4. use Anaconda to install the proper python environment (**this might take 10+ minutes, so feel free to grab a coffee while you wait**)
+4. Use Anaconda to install the proper python environment (**this might take 10+ minutes, so feel free to grab a coffee while you wait**)
    ```sh
    conda install notebook numpy pandas matplotlib scipy scikit-image pyarrow tqdm numba unzip
    ```
@@ -51,7 +51,7 @@ where `/path/to/` should be replaced with the directory path of migKeyPoint in y
    Move-Item -Path "$env:USERPROFILE\Downloads\zipped_files.zip" -Destination "C:\path\to\migKeyPoint"
    ```
 
-8. In the `migKeyPoint` directory, run `python3 setup_environment.py`. This script will unzip the contents of `zipped_files.zip` and will move them to their appropriate directories.
+8. In the `migKeyPoint` directory, run `python3 setup_environment.py`. This script will unzip the contents of `zipped_files.zip` and will move them to their appropriate directories. This script should only have to be used once!
 9. Assuming all went well, you are now set up to run the tutorials! Navigate to the `tutorials` directory, open up a Jupyter notebook by typing `jupyter notebook` in your terminal, and you can start playing around!
 
 # master_configuration.yaml instructions
