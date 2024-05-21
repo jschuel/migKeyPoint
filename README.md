@@ -39,8 +39,8 @@ If neither of these work, you can download the zipped directory.
 6. Move `zipped_files.zip` that you just downloaded to the `migKeyPoint/` directory you cloned. If you aren't familiar with using the command line, on a UNIX-based terminal (i.e. a Mac or linux machine) you can type
    
    ```bash
-  mv ~/Downloads/zipped_files.zip /path/to/migKeyPoint
-  ```
+   mv ~/Downloads/zipped_files.zip /path/to/migKeyPoint
+   ```
 
 where `/path/to/` should be replaced with the directory path of migKeyPoint in your filesystem. In Windows Powershell the equivalent is
 
