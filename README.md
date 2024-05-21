@@ -11,16 +11,14 @@
 1. Clone this repository. I've only ever used git in a command line interface, so open up a terminal and try
 
 ```bash
-git clone git@github.com:<your_username>/migKeyPoint.git
+git clone git@github.com:jschuel/migKeyPoint.git
 ```
 
 For the above command to work, you have to add an ssh key [(instructions here)](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux) to your account which I would recommend doing (it makes editing git repos way easier). if this doesn't work try
 
 ```bash
-git clone https://github.com/<your_username>/migKeyPoint.git
+git clone https://github.com/jschuel/migKeyPoint.git
 ```
-
-**Note: you need to replace <your_username> with your actual username (and no brackets)**
 
 If neither of these work, you can download the zipped directory.
 
