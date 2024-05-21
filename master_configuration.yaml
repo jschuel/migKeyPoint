@@ -1,0 +1,35 @@
+yoloConf:
+  use_pretrained: True #Only relevant to keyPoint_example_part2. Set to True if you're using models that Jeff pretrained, set to False if you want to use models you trained yourself
+  noise: True #Set to True if you are training or evaluating a model with noise 
+  log_scale: False #Set to True if you are using logarithmic intensity scale images in training or evaluation
+  cameraX: 2048 #x-pixel dimension of the ORCA-Quest camera
+  cameraY: 1152 #y-pixel dimension of the ORCA-Quest camera
+  outputX: 512 #x-pixel dimension of the images we train on. Use 512 if you want 4 x 4 binning on the Orca Quest
+  outputY: 288 #y-pixel dimension of the images	we train on. Use 288 if	you want 4 x 4 binning on the Orca Quest
+  numKeyPoints: 7 #IMPORTANT this defines how many keypoints we generate and evaluate. This value is inclusive of the head and tail points, so we generate numKeyPoints-2 points since we already know the head and tail in our simulation
+  GPU: True #set to True if using GPU else False
+
+
+
+###BELOW ARE CONFIGURATIONS FOR THE ULTRALYTICS PACKAGE, YOU PROBABLY WON'T NEED TO EDIT THESE###
+
+
+linear_scale: # Ultralytics YOLO configurations for linear_scale
+  project: '../models/raw_linear' #Where output YOLO trained models are stored
+  yoloConfigFile: '../configs/keypoint.yaml' #The configuration file for YOLO
+  suffix: '' #suffix to append to "train", "valid", and "test", for PNG and label filePaths
+  
+log_scale: # Ultralytics configurations for log_scale
+  project: '../models/raw_log' #Where output YOLO trained models are stored
+  yoloConfigFile: '../configs/keypoint_log.yaml' #The configuration file for YOLO
+  suffix: '_log'
+  
+linear_scale_noise: # Ultralytics YOLO configurations for linear_scale with noisy sim
+  project: '../models/noise_linear' #Where output YOLO trained models are stored
+  yoloConfigFile: '../configs/keypoint_noise.yaml' #The configuration file for YOLO
+  suffix: '_noise'
+  
+log_scale_noise: # Ultralytics YOLO configurations for log_scale with noisy sim
+  project: '../models/noise_log' #Where output YOLO trained models are stored
+  yoloConfigFile: '../configs/keypoint_log_noise.yaml' #The configuration file for YOLO
+  suffix: '_log_noise'
