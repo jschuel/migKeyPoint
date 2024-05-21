@@ -55,9 +55,10 @@ where `/path/to/` should be replaced with the directory path of migKeyPoint in y
 
 # master_configuration.yaml instructions (Coming soon)
 ### This is a global configuration file that controls several settings in the jupyter notebook tutorial scripts.
-The main variables that you will be editing as you go through these tutorials:\
-**noise**: Set this to True when you want to generate simulation with noise and train and/or evaluate YOLO models on simulation with noise. Otherwise set to False\
+The main variables that you will be editing as you go through these tutorials:
 
-**log_scale**: Set to True when you want to work with images on a logarithmic colorscale, otherwise set to False. I found that in the realistic simulation sample (with noise) that a linear colorscale performs better. That being said, if you start labeling real data with bounding boxes and key points, a logarithmic scale with Gaussian filtering is easiest to see, so there are tradeoffs to consider.\
+**noise**: Set this to True when you want to generate simulation with noise and train and/or evaluate YOLO models on simulation with noise. Otherwise set to False
+
+**log_scale**: Set to True when you want to work with images on a logarithmic colorscale, otherwise set to False. I found that in the realistic simulation sample (with noise) that a linear colorscale performs better. That being said, if you start labeling real data with bounding boxes and key points, a logarithmic scale with Gaussian filtering is easiest to see, so there are tradeoffs to consider.
 
 **numKeyPoints**: If you change this you must manually change this in each relevant `.yaml` file in the `configs/keypoint.yaml` folder. Unfortunately these aren't yet linked together but I'll hopefully change this in a future version.
