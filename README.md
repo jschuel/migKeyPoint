@@ -53,8 +53,8 @@ where `/path/to/` should be replaced with the directory path of migKeyPoint in y
 7. In the `migKeyPoint` directory, run `python3 setup_environment.py`. This script will unzip the contents of `zipped_files.zip` and will move them to their appropriate directories.
 8. Assuming all went well, you are now set up to run the tutorials! Navigate to the `tutorials` directory, open up a Jupyter notebook by typing `jupyter notebook` in your terminal, and you can start playing around!
 
-# master_configuration.yaml instructions (Coming soon)
-### This is a global configuration file that controls several settings in the jupyter notebook tutorial scripts.
+# master_configuration.yaml instructions
+### This is a global configuration file that controls several settings in the jupyter notebook tutorial scripts. You can edit the fields in your favorite text editor
 The main variables that you will be editing as you go through these tutorials:
 
 **noise**: Set this to True when you want to generate simulation with noise and train and/or evaluate YOLO models on simulation with noise. Otherwise set to False
