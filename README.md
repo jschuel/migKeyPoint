@@ -24,7 +24,7 @@ git clone https://github.com/<your_username>/migKeyPoint.git
 
 If neither of these work, you can download the zipped directory.
 
-2. Navigate to the `migKeyPoint/` directory and use Anaconda to install the proper python environment:
+2. Navigate to the `migKeyPoint/` directory and use Anaconda to install the proper python environment (**this might take 10+ minutes, so feel free to grab a coffee while you wait**):
    
    ```sh
    conda env create -f environment.yml
@@ -36,7 +36,7 @@ If neither of these work, you can download the zipped directory.
    conda activate test
    ```
    
-4. This environment contains all packages except `PyTorch` and `Ultralyics`. Follow the instructions [here](https://pytorch.org/) to install pytorch (if you have an Nvidia graphics card on your system you can install one of the CUDA builds for GPU capabilities, otherwise click "CPU" as the Compute platform). Install ultralytics with `pip install ultralytics`
+4. This environment contains all packages you need except `PyTorch` and `Ultralyics`. Follow the instructions [here](https://pytorch.org/) to install pytorch (if you have an Nvidia graphics card on your system you can install one of the CUDA builds for GPU capabilities, otherwise click "CPU" as the Compute platform). Install ultralytics with `pip install ultralytics`
 5. Download the zip file [here](https://drive.google.com/file/d/1khof-pr0RCnWILtT5D3njaNrtxZDrW-q/view?usp=sharing). This file contains all of the data you will need to run the tutorials. **Important: Do not unzip the file! I have an unzip script that will take care of moving the files properly**.
 6. Move `zipped_files.zip` that you just downloaded to the `migKeyPoint/` directory you cloned. If you aren't familiar with using the command line, on a UNIX-based terminal (i.e. a Mac or linux machine) you can type
    
@@ -54,3 +54,10 @@ where `/path/to/` should be replaced with the directory path of migKeyPoint in y
 8. Assuming all went well, you are now set up to run the tutorials! Navigate to the `tutorials` directory, open up a Jupyter notebook by typing `jupyter notebook` in your terminal, and you can start playing around!
 
 # master_configuration.yaml instructions (Coming soon)
+### This is a global configuration file that controls several settings in the jupyter notebook tutorial scripts.
+The main variables that you will be editing as you go through these tutorials:\
+**noise**: Set this to True when you want to generate simulation with noise and train and/or evaluate YOLO models on simulation with noise. Otherwise set to False\
+
+**log_scale**: Set to True when you want to work with images on a logarithmic colorscale, otherwise set to False. I found that in the realistic simulation sample (with noise) that a linear colorscale performs better. That being said, if you start labeling real data with bounding boxes and key points, a logarithmic scale with Gaussian filtering is easiest to see, so there are tradeoffs to consider.\
+
+**numKeyPoints**: If you change this you must manually change this in each relevant `.yaml` file in the `configs/keypoint.yaml` folder. Unfortunately these aren't yet linked together but I'll hopefully change this in a future version.
