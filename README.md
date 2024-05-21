@@ -35,7 +35,7 @@ If neither of these work, you can download the zipped directory.
    ```
 4. use Anaconda to install the proper python environment (**this might take 10+ minutes, so feel free to grab a coffee while you wait**)
    ```sh
-   conda install notebook numpy pandas matplotlib scipy scikit-image pyarrow tqdm numba zipfile
+   conda install notebook numpy pandas matplotlib scipy scikit-image pyarrow tqdm numba unzip
    ```
 5. This environment contains all packages you need except `PyTorch` and `Ultralyics`. Follow the instructions [here](https://pytorch.org/) to install pytorch (if you have an Nvidia graphics card on your system you can install one of the CUDA builds for GPU capabilities, otherwise click "CPU" as the Compute platform). Install ultralytics with `pip install ultralytics`
 6. Download the zip file [here](https://drive.google.com/file/d/1khof-pr0RCnWILtT5D3njaNrtxZDrW-q/view?usp=sharing). This file contains all of the data you will need to run the tutorials. **Important: Do not unzip the file! I have an unzip script that will take care of moving the files properly**.
