@@ -1,11 +1,11 @@
 # migKeyPoint
 
 ## Getting started
-**Prerequisites**\
+**Prerequisites**
 
-0.0. If you don't already have [Anaconda](https://docs.anaconda.com/free/anaconda/install/) on your system, follow the instructions in the link to install it.\
+0.0. If you don't already have [Anaconda](https://docs.anaconda.com/free/anaconda/install/) on your system, follow the instructions in the link to install it.
 
-0.1. If you don't have git set up on your computer [follow these instructions for your system](https://www.atlassian.com/git/tutorials/install-git).\
+0.1. If you don't have git set up on your computer [follow these instructions for your system](https://www.atlassian.com/git/tutorials/install-git).
 
 **Setting up the package**
 1. Clone this repository. I've only ever used git in a command line interface, so open up a terminal and try
