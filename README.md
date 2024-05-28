@@ -53,15 +53,29 @@ where `/path/to/` should be replaced with the directory path of `migKeyPoint/mig
 
 8. In the `migKeyPoint/migKeyPoint` directory, run `python3 setup_environment.py`. This script will unzip the contents of `zipped_data.zip` and will move them to their appropriate directories. This script should only have to be used once!
 9. In the same directory run `python3 make_project.py`. This will create a directory called `tutorial` which is where all data and trained models will be stored.
-10. Assuming all went well, you are now set up to run the tutorials! Navigate to the `notebook` directory, open up a Jupyter notebook by typing `jupyter notebook` in your terminal, and you can start playing around!
 
 # Usage
+master_configuration.yaml (screenshot below) controls everything in this software.
 ![configuration](figures/configuration.png)
-### This is a global configuration file that controls several settings in the jupyter notebook tutorial scripts. You can edit the fields in your favorite text editor
-The main variables that you will be editing as you go through these tutorials:
+The file has three configuration sets
+1. 'yoloConf': Global configurations for training and evaluating YOLO. Here are notes about some of the configuration subfields:
+   
+   a. If you want to create a new project, you can change what's entered into the 'project_dir' and then run `make_project.py`
+   
+   b. 'pretrained_model_path': This is currently only used in notebook #2 to show an example of evaluating a YOLO model without having to train one
 
-**noise**: Set this to True when you want to generate simulation with noise and train and/or evaluate YOLO models on simulation with noise. Otherwise set to False
+   c. 'maxNumKeyPoints': Set this equal to the number of key points you want to train YOLO to find
 
-**log_scale**: Set to True when you want to work with images on a logarithmic colorscale, otherwise set to False. I found that in the realistic simulation sample (with noise) that a linear colorscale performs better. That being said, if you start labeling real data with bounding boxes and key points, a logarithmic scale with Gaussian filtering is easiest to see, so there are tradeoffs to consider.
+   There are lots of things that on under the hood depending on whether you set 'noise' or 'log_scale' to True or False. `utils/YAMLtools.py` does the work here. Some convenience functions in `YAMLtools.py` are installed with `migKeyPoint` and are demonstrated in the notebook tutorials.
+   
+2. 'labelStudioConf: Configuration for label studio automated pre-annotations.
+   a. 'ML_path': Change this if you want to use a different pretrained or custom trained YOLO model as the model to generate automated pre-annotations with label studio. The path that's set upon installation works out of the box as an example
+   b. 'URL': This will need to be modified to your machine's ip address
+   c. 'TOKEN': Unique token for your label studio build. You need to change this to the token that shows up when you run `label-studio user --username <email address you use to sign into Label Studio>` in your terminal
 
-**numKeyPoints**: If you change this you must manually change this in each relevant `.yaml` file in the `configs/keypoint.yaml` folder. Unfortunately these aren't yet linked together but I'll hopefully change this in a future version.
+3. 'Objects': Any objects set to True will show up both in Label Studio and your YOLO trainings. Those set to False will not show up.
+
+# Notebooks
+There are currently 3 jupyter notebook tutorials in the `notebook` directory. These will teach you how to read configurations from `master_configuration.yaml` and how to train and evaluate YOLO. **Note:** If you don't have a GPU on your machine, you can work through all cells of notebook #1 except for the last cell. After working through that, you can move on to notebook #2 to evaluate the data you created in notebook #1 with a pretrained YOLO model.
+
+# Setting up label-studio
