@@ -42,13 +42,13 @@ If neither of these work, you can download the zipped directory.
 7. Move `zipped_data.zip` that you just downloaded to the `migKeyPoint/migKeyPoint/` directory. If you aren't familiar with using the command line, on a UNIX-based terminal (i.e. a Mac or linux machine) you can type
    
    ```bash
-   mv ~/Downloads/zipped_files.zip /path/to/migKeyPoint/migKeyPoint
+   mv ~/Downloads/zipped_data.zip /path/to/migKeyPoint/migKeyPoint
    ```
 
 where `/path/to/` should be replaced with the directory path of `migKeyPoint/migKeyPoint` in your filesystem. In Windows Powershell the equivalent is
 
    ```powershell
-   Move-Item -Path "$env:USERPROFILE\Downloads\zipped_files.zip" -Destination "C:\path\to\migKeyPoint\migKeyPoint"
+   Move-Item -Path "$env:USERPROFILE\Downloads\zipped_data.zip" -Destination "C:\path\to\migKeyPoint\migKeyPoint"
    ```
 
 8. In the `migKeyPoint/migKeyPoint` directory, run `python3 setup_environment.py`. This script will unzip the contents of `zipped_data.zip` and will move them to their appropriate directories. This script should only have to be used once!
