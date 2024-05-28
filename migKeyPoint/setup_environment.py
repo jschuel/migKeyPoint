@@ -17,8 +17,8 @@ def main(zip_file_path = 'zipped_data.zip',extract_to=''):
     shutil.move("zipped_data/darks",".")
     shutil.move("zipped_data/pretrained/",".")
     print("Cleaning up\n")
-    #os.remove("zipped_data.zip")
-    #os.rmdir("zipped_data/")
+    os.remove("zipped_data.zip")
+    os.rmdir("zipped_data/")
     print("SUCCESS!")
 
 if __name__ == '__main__':

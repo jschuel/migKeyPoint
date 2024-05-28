@@ -1,26 +1,22 @@
 yoloConf: #This is our master yolo configuration that drives the rest of the package
-
   project_dir: 'tutorial' #This creates a parent directory for your project. Everything related to the project will be present in this directory
-  
   pretrained_model_path: '../pretrained/linear/best.pt' #Input the path to a pretrained model. Leave empty if you want to use a model you custom trained
-  
   noise: False #Set to True if you are training or evaluating a model with noise
-  
   log_scale: False #Set to True if you are using logarithmic intensity scale images in training or evaluation
-  
   cameraX: 2048 #x-pixel dimension of the ORCA-Quest camera
-  
   cameraY: 1152 #y-pixel dimension of the ORCA-Quest camera
-  
   outputX: 512 #x-pixel dimension of the images we train on. Use 512 if you want 4 x 4 binning on the Orca Quest
-  
   outputY: 288 #y-pixel dimension of the images	we train on. Use 288 if	you want 4 x 4 binning on the Orca Quest
-  
   maxNumKeyPoints: 9 #IMPORTANT this defines how many keypoints we generate and evaluate. This value is inclusive of the head and tail points, so we generate numKeyPoints-2 points since we already know the head and tail in our simulation
-  
   GPU: True #set to True if using GPU else False
 
-Objects: #These are the object classes you want to train YOLO on. You can define new objects by adding a new row. These are read into generate_xml.py for LabelStudio
+labelStudioConf: #Configuration for Label Studio
+  ML_path: '../../pretrained/linear/best.pt' #Set the path you want for YOLO models weights for Label Studio preannotations
+  URL: 'http://192.168.1.163:8080' #Find your local IP address using ifconfig -a in the terminal. Your URL should then be 'http://<your_IP_address>:8080
+  TOKEN: 'f0f1692429d29c1e8ede5bb137f646737fff7fbe' #This is a security token to communicate with Label Studio. You can find this by typing label-studio user --username <email address you use to sign into Label Studio> in your terminal
+  
+
+Objects: #These are the object classes you want to train YOLO on. You can define new objects by adding a new row. These are read into generate_xml.py for LabelStudio and preannotate.py for the LabelStudio ML backend
   ER: True
   Hot_pixel: False
   NR: True
