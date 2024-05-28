@@ -67,6 +67,6 @@ def create_keypoint_config(master_config_path):
     yaml.add_representer(list, represent_list(flow_style=True))
 
     # Save new YOLO config
-    outfile = conf['yoloConf']['project_dir']+'/configs/keypoint.yaml'
+    outfile = master_config['yoloConf']['project_dir']+'/configs/keypoint.yaml'
     save_yaml(yolo_config, outfile)
     print(f"Created YOLO configuration saved to {outfile}")
