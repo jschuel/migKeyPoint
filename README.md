@@ -55,7 +55,8 @@ where `/path/to/` should be replaced with the directory path of `migKeyPoint/mig
 9. In the same directory run `python3 make_project.py`. This will create a directory called `tutorial` which is where all data and trained models will be stored.
 10. Assuming all went well, you are now set up to run the tutorials! Navigate to the `notebook` directory, open up a Jupyter notebook by typing `jupyter notebook` in your terminal, and you can start playing around!
 
-# master_configuration.yaml instructions
+# Usage
+![configuration](figures/configuration.png)
 ### This is a global configuration file that controls several settings in the jupyter notebook tutorial scripts. You can edit the fields in your favorite text editor
 The main variables that you will be editing as you go through these tutorials:
 
