@@ -79,3 +79,4 @@ The file has three configuration sets
 There are currently 3 jupyter notebook tutorials in the `notebook` directory. These will teach you how to read configurations from `master_configuration.yaml` and how to train and evaluate YOLO. **Note:** If you don't have a GPU on your machine, you can work through all cells of notebook #1 except for the last cell. After working through that, you can move on to notebook #2 to evaluate the data you created in notebook #1 with a pretrained YOLO model.
 
 # Setting up label-studio
+I've tried to streamline this as much as possible with migKeyPoint. Please follow the instructions [in this slideshow](https://docs.google.com/presentation/d/1FDKkxweYDG9u1n0TzTrJw5o5tSnjffNfqhE6w_lJTtg/edit?usp=sharing)
