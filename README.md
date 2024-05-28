@@ -33,11 +33,11 @@ If neither of these work, you can download the zipped directory.
    ```sh
    conda activate keypoint
    ```
-4. Use Anaconda to install the proper python environment (**this might take 10+ minutes, so feel free to grab a coffee while you wait**)
+4. If you're not currently there, navigate to `migKeyPoint/` where setup.py is located, then install migKeyPoint with
    ```sh
-   conda install notebook numpy pandas matplotlib scipy scikit-image pyarrow tqdm numba unzip
+   pip install -e .
    ```
-5. This environment contains all packages you need except `PyTorch` and `Ultralyics`. Follow the instructions [here](https://pytorch.org/) to install pytorch (if you have an Nvidia graphics card on your system you can install one of the CUDA builds for GPU capabilities, otherwise click "CPU" as the Compute platform). Install ultralytics with `pip install ultralytics`
+5. After installing migKeyPoint, you still need to separately install `PyTorch` and `Ultralyics`. We install these separately since they interact with the GPU, so compatibility can be a bit trickier get right. Follow the instructions [here](https://pytorch.org/) to install pytorch (if you have an Nvidia graphics card on your system you can install one of the CUDA builds for GPU capabilities, otherwise click "CPU" as the Compute platform). Install ultralytics with `pip install ultralytics`
 6. Download the zip file [here](https://drive.google.com/file/d/1khof-pr0RCnWILtT5D3njaNrtxZDrW-q/view?usp=sharing). This file contains all of the data you will need to run the tutorials. **Important: Do not unzip the file! I have an unzip script that will take care of moving the files properly**.
 7. Move `zipped_files.zip` that you just downloaded to the `migKeyPoint/` directory you cloned. If you aren't familiar with using the command line, on a UNIX-based terminal (i.e. a Mac or linux machine) you can type
    
