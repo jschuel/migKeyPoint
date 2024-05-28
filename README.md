@@ -38,21 +38,22 @@ If neither of these work, you can download the zipped directory.
    pip install -e .
    ```
 5. After installing migKeyPoint, you still need to separately install `PyTorch` and `Ultralyics`. We install these separately since they interact with the GPU, so compatibility can be a bit trickier get right. Follow the instructions [here](https://pytorch.org/) to install pytorch (if you have an Nvidia graphics card on your system you can install one of the CUDA builds for GPU capabilities, otherwise click "CPU" as the Compute platform). Install ultralytics with `pip install ultralytics`
-6. Download the zip file [here](https://drive.google.com/file/d/1khof-pr0RCnWILtT5D3njaNrtxZDrW-q/view?usp=sharing). This file contains all of the data you will need to run the tutorials. **Important: Do not unzip the file! I have an unzip script that will take care of moving the files properly**.
-7. Move `zipped_files.zip` that you just downloaded to the `migKeyPoint/` directory you cloned. If you aren't familiar with using the command line, on a UNIX-based terminal (i.e. a Mac or linux machine) you can type
+6. Download the zip file [here](https://drive.google.com/file/d/1A8BRnTIUCh_Pp93iGF_62-29TjSEiSor/view?usp=sharing). This file contains all of the data you will need to run the tutorials. **Important: Do not unzip the file! I have an unzip script that will take care of moving the files properly**.
+7. Move `zipped_data.zip` that you just downloaded to the `migKeyPoint/migKeyPoint/`. If you aren't familiar with using the command line, on a UNIX-based terminal (i.e. a Mac or linux machine) you can type
    
    ```bash
-   mv ~/Downloads/zipped_files.zip /path/to/migKeyPoint
+   mv ~/Downloads/zipped_files.zip /path/to/migKeyPoint/migKeyPoint
    ```
 
-where `/path/to/` should be replaced with the directory path of migKeyPoint in your filesystem. In Windows Powershell the equivalent is
+where `/path/to/` should be replaced with the directory path of `migKeyPoint/migKeyPoint` in your filesystem. In Windows Powershell the equivalent is
 
    ```powershell
-   Move-Item -Path "$env:USERPROFILE\Downloads\zipped_files.zip" -Destination "C:\path\to\migKeyPoint"
+   Move-Item -Path "$env:USERPROFILE\Downloads\zipped_files.zip" -Destination "C:\path\to\migKeyPoint\migKeyPoint"
    ```
 
-8. In the `migKeyPoint` directory, run `python3 setup_environment.py`. This script will unzip the contents of `zipped_files.zip` and will move them to their appropriate directories. This script should only have to be used once!
-9. Assuming all went well, you are now set up to run the tutorials! Navigate to the `tutorials` directory, open up a Jupyter notebook by typing `jupyter notebook` in your terminal, and you can start playing around!
+8. In the `migKeyPoint/migKeyPoint` directory, run `python3 setup_environment.py`. This script will unzip the contents of `zipped_data.zip` and will move them to their appropriate directories. This script should only have to be used once!
+9. In the same directory run `python3 make_project.py` this will create a directory called `tutorial` which is where all data and trained models will be stored.
+10. Assuming all went well, you are now set up to run the tutorials! Navigate to the `tutorials` directory, open up a Jupyter notebook by typing `jupyter notebook` in your terminal, and you can start playing around!
 
 # master_configuration.yaml instructions
 ### This is a global configuration file that controls several settings in the jupyter notebook tutorial scripts. You can edit the fields in your favorite text editor
