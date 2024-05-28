@@ -4,7 +4,7 @@ yoloConf: #This is our master yolo configuration that drives the rest of the pac
   
   pretrained_model_path: '' #Input the path to a pretrained model. Leave empty if you want to use a model you custom trained
   
-  noise: False #Set to True if you are training or evaluating a model with noise
+  noise: True #Set to True if you are training or evaluating a model with noise
   
   log_scale: False #Set to True if you are using logarithmic intensity scale images in training or evaluation
   

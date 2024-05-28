@@ -48,7 +48,7 @@ def create_keypoint_config(master_config_path):
     
     # Create new YOLO config
     yolo_config = {
-        'path': '../datasets/',
+        'path': master_config['yoloConf']['project_dir'] + '/datasets/',
         'train': 'train%s/'%(master_config['yoloConf']['suffix']),
         'val': 'valid%s/'%(master_config['yoloConf']['suffix']),
         'test': 'test%s/'%(master_config['yoloConf']['suffix']),
