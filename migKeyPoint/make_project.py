@@ -7,7 +7,7 @@ conf = yt.load_configuration('master_configuration.yaml')['yoloConf']
 '''Get absolute path of project directory'''
 project_path = conf['project_dir']
 
-subdirs = ['configs','data','datasets','models','pretrained']
+subdirs = ['configs','data','datasets','models']
 
 print('Setting up project %s'%(os.path.split(project_path)[1]))
 for dir in subdirs:

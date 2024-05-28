@@ -2,9 +2,9 @@ yoloConf: #This is our master yolo configuration that drives the rest of the pac
 
   project_dir: 'tutorial' #This creates a parent directory for your project. Everything related to the project will be present in this directory
   
-  pretrained_model_path: '' #Input the path to a pretrained model. Leave empty if you want to use a model you custom trained
+  pretrained_model_path: '../pretrained/linear/best.pt' #Input the path to a pretrained model. Leave empty if you want to use a model you custom trained
   
-  noise: True #Set to True if you are training or evaluating a model with noise
+  noise: False #Set to True if you are training or evaluating a model with noise
   
   log_scale: False #Set to True if you are using logarithmic intensity scale images in training or evaluation
   
