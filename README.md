@@ -33,6 +33,8 @@ If neither of these work, you can download the zipped directory.
    ```sh
    conda activate keypoint
    ```
+
+   (Make sure you activate this environment every time you use this software!)
 4. If you're not currently there, navigate to `migKeyPoint/` where setup.py is located, then install migKeyPoint with
    ```sh
    pip install -e .
