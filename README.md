@@ -8,7 +8,7 @@
 0.1. If you don't have git set up on your computer [follow these instructions for your system](https://www.atlassian.com/git/tutorials/install-git).
 
 **Setting up the package**
-1. Clone this repository. I would recommend cloning via ssh over http, however it requires some extra steps [(these should work for MAC and Linux users)](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux).
+1. Clone this repository. I would recommend cloning via ssh over http, however it requires some extra steps [(these should work for Mac and Linux users)](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux).
 
 ```bash
 git clone git@github.com:jschuel/migKeyPoint.git
