@@ -68,5 +68,7 @@ def create_keypoint_config(master_config_path):
 
     # Save new YOLO config
     outfile = master_config['yoloConf']['project_dir']+'/configs/keypoint.yaml'
+    if not os.path.exists(os.path.split(outfile)[0]):
+        os.makedirs(os.path.split(outfile)[0])
     save_yaml(yolo_config, outfile)
     print(f"Created YOLO configuration saved to {outfile}")
