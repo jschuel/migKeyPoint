@@ -18,8 +18,8 @@ setup(
     ],
     python_requires='>=3.9',
     install_requires=[
-        "label-studio>=1.12.1",
-        "label-studio-ml>=1.0.9",
+        "label-studio==1.12.1",
+        "label-studio-ml==1.0.9",
         "notebook<6.5.0",
         "numpy>=1.17.5",
         "pandas>=1.0.0",
